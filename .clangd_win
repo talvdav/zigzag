@@ -1,0 +1,14 @@
+CompileFlags:
+    Add:
+      - "-IC:/gtk-build/gtk/x64/release/include/gtk-4.0"
+      - "-IC:/gtk-build/gtk/x64/release/include/glib-2.0"
+      - "-IC:/gtk-build/gtk/x64/release/include/cairo"
+      - "-IC:/gtk-build/gtk/x64/release/include/pango-1.0"
+      - "-IC:/gtk-build/gtk/x64/release/include/harfbuzz"
+      - "-IC:/gtk-build/gtk/x64/release/include/gdk-pixbuf-2.0"
+      - "-IC:/gtk-build/gtk/x64/release/include/graphene-1.0"
+      - "-IC:/gtk-build/gtk/x64/release/lib/glib-2.0/include"
+      - "-IC:/gtk-build/gtk/x64/release/lib/graphene-1.0/include"
+        
+        
+        
