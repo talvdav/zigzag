@@ -1,3 +1,6 @@
 /zig-cache/
 /zig-out/
 .clangd
+/sid/
+sid
+compile_commands.json
