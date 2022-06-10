@@ -8,11 +8,19 @@ print_hello(GtkWidget *widget,
 }
 
 static void
+print_foobar(GtkWidget *widget,
+            gpointer data)
+{
+  g_print("foobar\n");
+}
+
+static void
 activate(GtkApplication *app,
          gpointer user_data)
 {
   GtkWidget *window;
   GtkWidget *button;
+  GtkWidget *button1;
   GtkWidget *box;
 
   window = gtk_application_window_new(app);
@@ -24,9 +32,14 @@ activate(GtkApplication *app,
 
   button = gtk_button_new_with_label("Hello World");
   g_signal_connect(button, "clicked", G_CALLBACK(print_hello), NULL);
-  g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_window_destroy), window);
+  //g_signal_connect_swapped(button, "clicked", G_CALLBACK(gtk_window_destroy), window);
   gtk_box_append(GTK_BOX(box), button);
 
+  button1 = gtk_button_new_with_label("FooBar");
+  g_signal_connect(button1, "clicked", G_CALLBACK(print_foobar), NULL);
+  //g_signal_connect_swapped(button1, "clicked", G_CALLBACK(gtk_window_destroy), window);
+  gtk_box_append(GTK_BOX(box), button1);
+  
   gtk_widget_show(window);
 }
 
